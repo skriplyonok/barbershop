@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Barbershop</title>
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href="css/style.css" rel="stylesheet">
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/jquery.main.js"></script>
+</head>
+<body>
+<div class="main-wrapper index-wrapper">
+	<header>
+		<div class="container">
+			<ul class="main-menu">
+				<li class="active"><a href="index.html">Главная</a></li>
+				<li><a href="#">Информация</a></li>
+				<li><a href="#">Новости</a></li>
+				<li><a href="price.html">Прайс-лист</a></li>
+				<li><a href="shop.html">Магазин</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<a class="login" href="javascript:PopUpShow()">Вход</a>
+		</div>
+	</header>
+	<main class="container">
+		<a class="logo" href="index.html"><img src="images/logo.png" alt="logo"></a>
+		<ul class="advantages">
+			<li>
+				<h3>Быстро</h3>
+				<p>Мы делаем свою работу быстро! Два часа пролетят незаметно и вы - счастливый обладатель стильной стрижки-минутки!</p>
+			</li>
+			<li>
+				<h3>Круто</h3>
+				<p>Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.</p>
+			</li>
+			<li>
+				<h3>Дорого</h3>
+				<p>Наши мастера - профессионалы своего дела и не могут стоить дешево, к тому же, разве цена не дает определенный статус?</p>
+			</li>
+		</ul>
+		<div class="content">
+			<div class="news">
+				<h3>Новости</h3>
+				<div class="news-item">
+					<p>Нам наконец завезли ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки</p>
+					<p class="date">25 сентября</p>
+				</div>
+				<div class="news-item">
+					<p>В нашей команде пополнение, Борис "Бритва" Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды</p>
+					<p class="date">19 сентября</p>
+				</div>
+				<a class="button" href="#">Все новости</a>
+			</div>			
+			<div class="gallery">
+				<h3>Фотогалерея</h3>
+				<div class="wrap">
+					<ul class="list">
+						<li>
+							<img src="images/foto.jpg" alt="foto">
+						</li>
+					</ul>
+				</div>
+				<a href="#" class="next button">Вперед</a>
+				<a href="#" class="prev button">Назад</a>
+			</div>
+		</div>
+		<div class="content">
+			<div class="contacts">
+				<h3>Контактная информация</h3>
+				<p>Barbershop "Borodinski"<br>
+					Адрес: г.Москва,ул. Собаки Павлова, д.13<br>
+					телефон: +7 (495) 666-02-666 
+				</p>
+				<p>Время работы:<br>
+					пн-пт: с 10:00 до 22:00<br>
+					сб-вс: с 10:00 до 19:00
+				</p>
+				<a class="button" href="#">Как проехать</a>
+				<a class="button" href="#">Обратная связь</a>
+			</div>
+			<div class="registration">
+				<h3>Записаться</h3>
+				<p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
+				<form action="index.html">
+					<input type="text" id="date" name="date" placeholder="Дата">
+					<input type="text" id="time" name="time" placeholder="Время">
+					<input type="text" id="name" name="name" placeholder="Ваше имя">
+					<input type="text" id="tel" name="tel" placeholder="Телефон" required>
+					<input class="button" type="submit" id="submit-registration" name="submit-registration" value="Отправить">
+				</form>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="container">
+			<div class="contacts">		
+				<p>Barbershop "Borodinski"<br>
+					Адрес: г.Москва,ул. Собаки Павлова, д.13<br>
+					телефон: +7 (495) 666-02-666 
+				</p>
+			</div>
+			<div class="soc">
+				<p>Давайте дружить!</p>
+				<ul>
+					<li><a class="vk" href="#"></a></li>
+					<li><a class="facebook" href="#"></a></li>
+					<li><a class="instagram" href="#"></a></li>
+				</ul>
+			</div>
+			<div class="design">
+				<p>Дизайн сайта:</p>
+				<a class="button" href="#">Gluhanko.ru</a>	
+			</div>
+		</div>
+	</footer>
+
+<div class="popup" id="popup">
+    <div class="popup-content">
+		<h3>Личный кабинет</h3>
+		<p>Введите пожалуйста свой логин и пароль<br>
+			Если вы забыли пароль</p>
+		<form action="index.html">
+			<input type="text" id="name-popup" name="name" placeholder="Логин" required>
+			<input type="password" id="password" name="password" placeholder="Пароль" required>
+			<div>
+				<input type="checkbox" id="remember" name="remember">
+				<label for="remember"></label>
+				<label for="remember">Запомните меня</label>
+				<a class="forget" href="#">Я забыл пароль!</a>
+			</div>
+			<input class="button" type="submit" id="submit" name="submit" value="Войти">
+		</form>
+		<a class="close" href="javascript:PopUpHide()"></a>
+    </div>
+</div>
+
+</div>	
+</body>
+</html>
